@@ -1,0 +1,31 @@
+# Streamlit 深色專業主題配置
+# 複製此內容到 config.toml 以啟用深色主題
+
+[theme]
+# 主要顏色 - 科技藍
+primaryColor = "#00d4ff"
+
+# 背景顏色 - 深色背景
+backgroundColor = "#0e1117"
+
+# 次要背景顏色 - 側邊欄深色背景
+secondaryBackgroundColor = "#262730"
+
+# 文字顏色 - 淺色文字
+textColor = "#fafafa"
+
+# 字體
+font = "sans serif"
+
+[server]
+port = 8501
+headless = false
+runOnSave = true
+fileWatcherType = "auto"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showErrorDetails = true
+toolbarMode = "auto"
