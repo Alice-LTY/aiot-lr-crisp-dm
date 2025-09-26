@@ -1,6 +1,6 @@
 """
-Streamlit 網頁應用：簡單線性迴歸 CRISP-DM 演示
-Simple Linear Regression CRISP-DM Demo with Streamlit
+簡單線性迴歸 CRISP-DM 演示
+Simple Linear Regression CRISP-DM Demo
 """
 
 import streamlit as st
@@ -8,11 +8,8 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
-from plotly.subplots import make_subplots
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_squared_error
-import warnings
-warnings.filterwarnings('ignore')
 
 # 頁面配置
 st.set_page_config(
