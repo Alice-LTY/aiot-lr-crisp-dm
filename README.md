@@ -1,4 +1,4 @@
-# 📈 簡單線性迴歸 CRISP-D└── README.md                     # 說明文件
+# 簡單線性迴歸 CRISP-D
 ```
 
 ## 🚀 快速開始
@@ -102,14 +102,5 @@ streamlit run streamlit_app_optimized.py
 - [STEPS.md](STEPS.md) - Vibe Coding 開發步驟
 - [APP.md](APP.md) - 應用程式使用指南
 - [CHANGELOG.md](CHANGELOG.md) - 版本更新日誌
-
-## 📄 授權
-
-MIT License - 詳見 [LICENSE](LICENSE)
-
-## 👤 作者
-
-**Alice LTY** - [@Alice-LTY](https://github.com/Alice-LTY)
-
 ---
 *Built with Streamlit | 展示 CRISP-DM 方法論*
