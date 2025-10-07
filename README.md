@@ -1,7 +1,6 @@
 # 簡單線性迴歸 CRISP-D
 ```
-
-## 🚀 快速開始
+網頁：https://aiot-lr-crisp-dm-jbxtaun7mpwn3fverqmobh.streamlit.app/
 
 ### 安裝使用 **CRISP-DM 方法論**建立的簡單線性迴歸模型互動式應用。
 
@@ -19,7 +18,7 @@
 AIOT/
 ├── requirements.txt              # 套件依賴
 ├── linear_regression.py          # 核心實作
-├── streamlit_app_optimized.py    # 主應用 (推薦)
+├── streamlit_app_optimized.py    
 └── README.md                     # 說明文件
 ```
 
