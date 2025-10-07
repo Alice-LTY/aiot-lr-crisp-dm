@@ -1,97 +1,115 @@
-# 簡單線性迴歸 CRISP-DM 專案
+# 📈 簡單線性迴歸 CRISP-D└── README.md                     # 說明文件
+```
 
-這個專案展示如何使用 CRISP-DM 方法論來建立簡單線性迴歸模型。
+## 🚀 快速開始
 
-## 專案結構
+### 安裝使用 **CRISP-DM 方法論**建立的簡單線性迴歸模型互動式應用。
+
+## ✨ 主要特色
+
+- 🎯 互動式參數調整（斜率、截距、噪音）
+- 📊 多維度視覺化（迴歸線圖、殘差分析、噪音分佈）
+- 📈 完整效能評估（R²、MSE、RMSE、MAE）
+- 🔍 參數比較分析
+- 📚 內建 CRISP-DM 說明和 FAQ
+
+## 📁 專案結構
+
 ```
 AIOT/
-├── requirements.txt          # 套件依賴
-├── linear_regression.py      # 主要實作
-├── streamlit_app.py         # Streamlit 網頁應用
-├── demo.py                  # 演示腳本
-├── theme_switcher.py        # 主題切換工具
-├── README.md               # 專案說明
-├── .streamlit/
-│   ├── config.toml          # Streamlit 主題配置
-│   └── config_dark.toml     # 深色主題備份
-└── notebooks/
-    └── linear_regression_analysis.ipynb  # Jupyter 分析筆記本
+├── requirements.txt              # 套件依賴
+├── linear_regression.py          # 核心實作
+├── streamlit_app_optimized.py    # 主應用 (推薦)
+└── README.md                     # 說明文件
 ```
 
-## 安裝套件
+## � 快速開始
+
+### 安裝
+
 ```bash
+# 1. 克隆專案
+git clone https://github.com/Alice-LTY/aiot-lr-crisp-dm.git
+cd aiot-lr-crisp-dm
+
+# 2. 建立虛擬環境
+python3 -m venv aiot_env
+source aiot_env/bin/activate
+
+# 3. 安裝依賴
 pip install -r requirements.txt
 ```
 
-## 執行方式
-
-### 1. 基本分析
-```bash
-python linear_regression.py
-```
-
-### 2. Streamlit 網頁應用
-```bash
-streamlit run streamlit_app.py
-```
-
-#### 主題配置
-使用內建的主題切換工具：
+### 執行
 
 ```bash
-# 淺色主題（預設）
-python theme_switcher.py light
-
-# 深色主題
-python theme_switcher.py dark
-
-# 藍色專業主題
-python theme_switcher.py blue
+streamlit run streamlit_app_optimized.py
 ```
 
-#### 可用主題
-1. **淺色主題 (light)**: 
-   - 主要色: `#1f77b4` (經典藍)
-   - 背景色: `#ffffff` (白色)
-   - 文字色: `#262730` (深灰)
+應用將在瀏覽器中開啟 `http://localhost:8501`
 
-2. **深色主題 (dark)**: 
-   - 主要色: `#00d4ff` (科技藍)
-   - 背景色: `#0e1117` (深黑)
-   - 文字色: `#fafafa` (淺白)
+## 🎨 功能亮點
 
-3. **藍色專業主題 (blue)**:
-   - 主要色: `#2E86AB` (專業藍)
-   - 背景色: `#F8FBFF` (淺藍背景)
-   - 文字色: `#1A365D` (深藍文字)
+### 互動式視覺化
+- 📈 即時更新的迴歸線圖
+- 🔍 殘差分析圖（檢查模型假設）
+- 📊 噪音分佈直方圖
 
-### 3. Jupyter 筆記本分析
-開啟 `notebooks/linear_regression_analysis.ipynb`
+### 效能評估指標
+- **R²** (決定係數): 模型解釋變異的比例
+- **MSE/RMSE**: 預測誤差大小
+- **MAE**: 平均絕對誤差
+- **殘差統計**: 均值和標準差
 
-## CRISP-DM 流程
+### 參數分析
+- 真實參數 vs 預測參數對比表
+- 絕對誤差和相對誤差計算
+- 自動參數估計品質評估
 
-1. **Business Understanding (業務理解)**
-   - 建立簡單線性迴歸模型來理解變數間的線性關係
-   - 評估不同噪音水平對模型效能的影響
+## 📊 CRISP-DM 方法論
 
-2. **Data Understanding (資料理解)**
-   - 使用人工生成的資料 y = ax + b + noise
-   - 可調整參數：斜率(a)、截距(b)、噪音大小、資料點數量
+本專案實踐完整的 **CRISP-DM** 資料科學流程：
 
-3. **Data Preparation (資料準備)**
-   - 使用 numpy 生成合成資料
-   - 建立 pandas DataFrame 進行資料管理
+| 階段 | 說明 | 本專案實作 |
+|-----|------|-----------|
+| 🎯 **業務理解** | 確定專案目標 | 建立線性迴歸模型，探索噪音對效能的影響 |
+| 📚 **資料理解** | 探索資料特性 | 合成資料：`y = ax + b + noise` |
+| 🔧 **資料準備** | 清理和轉換 | NumPy/Pandas 生成與管理資料 |
+| 🤖 **建模** | 訓練模型 | scikit-learn LinearRegression (OLS) |
+| ✅ **評估** | 效能評估 | R²、MSE、RMSE、MAE、殘差分析 |
+| 🚀 **部署** | 實際應用 | Streamlit 互動式網頁應用 |
 
-4. **Modeling (建模)**
-   - 使用 scikit-learn LinearRegression
-   - 訓練模型並取得係數
+## 📈 效能指標
 
-5. **Evaluation (評估)**
-   - R² 決定係數
-   - 均方誤差 (MSE)
-   - 視覺化比較
+| 指標 | 說明 | 理想值 |
+|------|------|--------|
+| **R²** | 模型解釋變異的比例 | 接近 1 |
+| **MSE** | 預測誤差的平方平均 | 接近 0 |
+| **RMSE** | MSE 的平方根 | 接近 0 |
+| **MAE** | 預測誤差絕對值平均 | 接近 0 |
 
-6. **Deployment (部署)**
-   - Streamlit 互動式網頁應用
-   - 即時參數調整和結果視覺化
-   - Streamlit Cloud 線上部署
+**R² 評級**: ≥0.9 優秀 | 0.7-0.9 良好 | 0.5-0.7 中等 | <0.5 較差
+
+## 🛠️ 技術棧
+
+- Python 3.12 | NumPy, Pandas | scikit-learn
+- Plotly 視覺化 | Streamlit 網頁框架
+
+## 📝 相關文件
+
+- [DEPLOYMENT.md](DEPLOYMENT.md) - 部署指南（固定網址設定）
+- [REPORT.md](REPORT.md) - 專案報告與成果
+- [STEPS.md](STEPS.md) - Vibe Coding 開發步驟
+- [APP.md](APP.md) - 應用程式使用指南
+- [CHANGELOG.md](CHANGELOG.md) - 版本更新日誌
+
+## 📄 授權
+
+MIT License - 詳見 [LICENSE](LICENSE)
+
+## 👤 作者
+
+**Alice LTY** - [@Alice-LTY](https://github.com/Alice-LTY)
+
+---
+*Built with Streamlit | 展示 CRISP-DM 方法論*
