@@ -1,47 +1,19 @@
 [theme]
-# 主要顏色 - 科技藍
-primaryColor = "#00d4ff"
-
-# 背景顏色 - 深色背景
-backgroundColor = "#0e1117"
-
-# 次要背景顏色 - 側邊欄深色背景
-secondaryBackgroundColor = "#262730"
-
-# 文字顏色 - 淺色文字
-textColor = "#fafafa"
-
-# 字體
+# 淺色主題 - 更適合 Cloud 部署
+primaryColor = "#1f77b4"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0f2f6"
+textColor = "#262730"
 font = "sans serif"
 
 [server]
-# 固定端口號
-port = 8501
-
-# 允許外部訪問（本地網路其他裝置可訪問）
-# 設為 "0.0.0.0" 允許區域網路訪問
-# 設為 "localhost" 或 "127.0.0.1" 只允許本機訪問
-address = "localhost"
-
-# 無頭模式（部署時設為 true）
-headless = false
-
-# 自動重新載入
-runOnSave = true
-fileWatcherType = "auto"
-
-# 最大上傳大小 (MB)
-maxUploadSize = 200
-
-# 啟用 CORS（跨域資源共享）
+# Cloud 部署設定
+headless = true
 enableCORS = false
-
-# 啟用 XSRF 保護
 enableXsrfProtection = true
 
 [browser]
 gatherUsageStats = false
 
 [client]
-showErrorDetails = true
-toolbarMode = "auto"
+showErrorDetails = false
